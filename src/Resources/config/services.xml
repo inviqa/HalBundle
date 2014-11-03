@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="inviqa.hal.view_listener" class="Inviqa\HalBundle\Event\ViewListener">
+            <argument type="service" id="inviqa.hal.converters" />
+            <tag name="kernel.event_listener" event="kernel.view" method="onKernelView" />
+        </service>
+
+        <service id="inviqa.hal.converters" class="Inviqa\HalBundle\Converters\JsonResponseConverters">
+            <argument type="collection" />
+        </service>
+
+        <service id="inviqa.hal.esi_fragment_handler" class="Inviqa\HalBundle\FragmentHandler">
+            <argument type="service" id="fragment.handler" />
+            <argument type="service" id="esi" />
+            <argument type="service" id="request_stack" />
+        </service>
+    </services>
+</container>

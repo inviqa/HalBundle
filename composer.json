@@ -1,0 +1,14 @@
+{
+    "name": "sensio/hal-bundle",
+    "description": "Bundle for HAL support",
+    "keywords": ["REST","HAL"],
+    "type": "symfony-bundle",
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "nocarrier/hal": "~0.9"
+    },
+    "autoload": {
+        "psr-4": { "Inviqa\\HalBundle": "src" }
+    },
+    "minimum-stability": "dev"
+}
