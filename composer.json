@@ -5,10 +5,11 @@
     "type": "symfony-bundle",
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "nocarrier/hal": "~0.9"
+        "nocarrier/hal": "~0.9",
+        "phpspec/phpspec": "~2.1"
     },
     "autoload": {
-        "psr-4": { "Inviqa\\HalBundle": "src" }
+        "psr-4": { "Inviqa\\HalBundle\\": "src" }
     },
     "minimum-stability": "dev"
 }
