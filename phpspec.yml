@@ -1,0 +1,4 @@
+suites:
+  hal_bundle:
+    namespace: Inviqa\HalBundle
+    psr4_prefix: Inviqa\HalBundle
