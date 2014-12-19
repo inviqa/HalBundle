@@ -15,7 +15,7 @@ object. An exception will be thrown if there is no suitable converter.
 Current only JSON responses are supported, supporting the conversion to XML responses could
 be added if needed.
 
-There are no resource converted by default as they are specific to the use case.
+There are no resource converters by default as they are specific to the use case.
 
 Resource converters need to implement the `Inviqa\HalBundleInterface` interface:
 
@@ -38,13 +38,13 @@ These can then be registered by tagging the service definition with `inviqa.hal.
 
 There is also a `request.view` listener registered that will try and convert non `Response`
 return values from controllers in a similar way to the `@Template` annotation. It's all a bit
-magically since there is not even an annotation involved so probably best to avoid relying on this
+magical since there is not even an annotation involved so probably best to avoid relying on this
 or find a way of making it more explicit first.
 
 ESI Support
 -----------
 
-If you want to send JSON Response but use ESI then you can use `Inviqa\HalBundle\EsiHal`
+If you want to send a JSON Response but use ESI then you can use `Inviqa\HalBundle\EsiHal`
 instead of `Nocarrier\Hal`. This will prevent esi tags being escaped in the output. To
 add an embedded resource that is included by ESI and not directly rendered use
 
