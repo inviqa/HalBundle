@@ -1,5 +1,5 @@
 {
-    "name": "sensio/hal-bundle",
+    "name": "inviqa/hal-bundle",
     "description": "Bundle for HAL support",
     "keywords": ["REST","HAL"],
     "type": "symfony-bundle",
